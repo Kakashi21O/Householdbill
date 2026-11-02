@@ -20,8 +20,8 @@ interface AppSidebarProps {
 }
 
 const navItems = [
-  { label: "Dashboard", href: "/", icon: LayoutDashboard, current: true },
-  { label: "Billing", href: "#billing", icon: Receipt, badge: "Part 3" },
+  { label: "Dashboard", href: "/", icon: LayoutDashboard },
+  { label: "Billing", href: "/billing", icon: Receipt },
   { label: "Payments", href: "#payments", icon: CreditCard, badge: "Part 4" },
   { label: "History", href: "#history", icon: History, badge: "Part 5" },
   { label: "Reports", href: "#reports", icon: BarChart3, badge: "Part 6" },
@@ -60,7 +60,7 @@ export function AppSidebar({ onClose, isMobile }: AppSidebarProps) {
       <nav className="flex-1 space-y-1.5">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const isActive = item.current && pathname === "/";
+          const isActive = pathname === item.href;
           return (
             <Link
               key={item.label}

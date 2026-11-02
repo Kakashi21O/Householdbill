@@ -12,6 +12,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const supabase = React.useMemo(() => createClient(), []);
 
   React.useEffect(() => {
+    const isConfigured = Boolean(
+      process.env.NEXT_PUBLIC_SUPABASE_URL &&
+      !process.env.NEXT_PUBLIC_SUPABASE_URL.includes("placeholder")
+    );
+    if (!isConfigured) return;
+
     async function loadUser() {
       try {
         const { data: { user } } = await supabase.auth.getUser();

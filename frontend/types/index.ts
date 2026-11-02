@@ -22,11 +22,16 @@ export interface HouseholdSettings {
 export interface Bill {
   id: string;
   household_id: string;
+  title?: string;
   category: "rent" | "electricity" | "other";
   billing_month: number;
   billing_year: number;
   amount: number;
+  issue_date?: string;
   due_date: string;
+  description?: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface Payment {
