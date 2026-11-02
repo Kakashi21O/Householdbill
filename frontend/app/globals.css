@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  /* LIGHT THEME: Enhanced Oceanic Cyan-Blue Depth */
+  :root,
+  [data-theme="light"],
+  .light {
+    --background: #D8ECF8;
+    --surface: #CDE5F4;
+    --card: #CDE5F4;
+    --card-subtle: #BDDBEE;
+    --input: #E4F1FA;
+
+    --border: #A3CAE3;
+    --border-focus: #1D4ED8;
+
+    --foreground: #0E2540;
+    --text-muted: #3B5372;
+    --text-dim: #5B7596;
+
+    --primary: #0284C7;
+    --primary-foreground: #FFFFFF;
+    --secondary: #1D4ED8;
+    --secondary-foreground: #FFFFFF;
+
+    --success: #059669;
+    --warning: #D97706;
+    --danger: #DC2626;
+
+    --shadow-card: 0 12px 30px rgba(14, 53, 90, 0.12);
+    --bg-gradient: radial-gradient(ellipse at 50% -20%, #A2D5F2 0%, #C4E3F6 45%, #B4DAF2 100%);
+    --glass-bg: rgba(205, 229, 244, 0.85);
+    --glass-border: rgba(163, 202, 227, 0.7);
+  }
+
+  /* DARK THEME: Pure Deep Blue / Midnight Sapphire (No Purple, No Light Black) */
+  [data-theme="dark"],
+  .dark {
+    --background: #060B14;
+    --surface: #0B1424;
+    --card: #0F1B30;
+    --card-subtle: #152440;
+    --input: #0B1526;
+
+    --border: rgba(56, 130, 246, 0.18);
+    --border-focus: #38BDF8;
+
+    --foreground: #F0F6FC;
+    --text-muted: #8AA2C2;
+    --text-dim: #557094;
+
+    --primary: #2563EB;
+    --primary-foreground: #FFFFFF;
+    --secondary: #38BDF8;
+    --secondary-foreground: #060B14;
+
+    --success: #10B981;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+    --shadow-card: 0 12px 32px rgba(2, 6, 14, 0.65);
+    --bg-gradient: radial-gradient(ellipse at 50% -20%, #10264A 0%, #081223 50%, #040810 100%);
+    --glass-bg: rgba(11, 20, 36, 0.75);
+    --glass-border: rgba(56, 130, 246, 0.22);
+  }
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--foreground);
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+}
+
+.app-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  border-radius: 0.75rem;
+}
