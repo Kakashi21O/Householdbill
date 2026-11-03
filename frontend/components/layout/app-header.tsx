@@ -14,7 +14,7 @@ interface AppHeaderProps {
 
 export function AppHeader({ onMenuClick, userRole = "visitor", userEmail, onLogout }: AppHeaderProps) {
   return (
-    <header className="sticky top-0 z-30 h-16 w-full bg-transparent backdrop-blur-[99px] md:border-b-0 border-b border-[var(--border)] px-4 md:px-6 flex items-center justify-between">
+    <header className="sticky top-2 z-30 h-16 w-full bg-transparent backdrop-blur-[99px] md:border-b-0 border-b border-[var(--border)] px-4 md:px-6 flex items-center justify-between">
       <div className="flex items-center gap-3">
         <button
           onClick={onMenuClick}
