@@ -23,7 +23,7 @@ const navItems = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
   { label: "Billing", href: "/billing", icon: Receipt },
   { label: "Payments", href: "/payments", icon: CreditCard },
-  { label: "History", href: "#history", icon: History, badge: "Part 5" },
+  { label: "History", href: "/history", icon: History },
   { label: "Reports", href: "#reports", icon: BarChart3, badge: "Part 6" },
   { label: "Settings", href: "#settings", icon: Settings, badge: "Part 7" },
 ];
